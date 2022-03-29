@@ -54,7 +54,11 @@ To install the required python packages simply type
 ```
 pip3 install -r requirements.txt
 ```
-
+Install tensorflow gpu 1.15.0 version, if you have a nvidia GPU prepared, CUDA 11.0, CUDNN 8.0.5 installed:
+```
+pip3 install tensorflow-gpu==1.15 &&
+pip install 'keras==2.16' --force-reinstall
+```
 ### Download
 
 To download the dataset images simply issue
