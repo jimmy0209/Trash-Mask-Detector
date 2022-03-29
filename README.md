@@ -46,10 +46,6 @@ If you use this dataset and API in a publication, please cite us using: &nbsp;
 }
 ```
 
-# News
-**December 20, 2019** - Added more 785 images and 2642 litter segmentations. <br/>
-**November 20, 2019** - TACO is officially open for new annotations: http://tacodataset.org/annotate
-
 # Getting started
 
 ### Requirements 
@@ -65,23 +61,16 @@ To download the dataset images simply issue
 ```
 python3 download.py
 ```
-Alternatively, download from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3587843.svg)](https://doi.org/10.5281/zenodo.3587843)
 
-Our API contains a jupyter notebook ``demo.pynb`` to inspect the dataset and visualize annotations.
+### Prepare models
 
-**Unlabeled data**
+Download the [models](https://drive.google.com/drive/folders/1042Qzq988frb61LwItuM4JjuYi-9KIcS?usp=sharing), create ``detector/models/`` directory, and put them under ``detector/models/`` directory, such as ``Trash-Detect-Mask/detector/models/mask_rcnn_coco.h5``
 
-A list of URLs for both unlabeled and labeled images is now also provided in `data/all_image_urls.csv`.
-Each image contains one URL for each original image (second column) and one URL for a VGA-resized version (first column)
-for images hosted by Flickr. If you decide to annotate these images using other tools, please make them public and contact us so we can keep track.
-
-**Unofficial data**
-
-Annotations submitted via our website are added weekly to `data/annotations_unofficial.json`. These have not yet been been reviewed by us -- some may be inaccurate or have poor segmentations. 
-You can use the same command to download the respective images:
 ```
-python3 download.py --dataset_path ./data/annotations_unofficial.json
+cd detector
+mkdir models
 ```
+
 
 ### Trash Detection
 
