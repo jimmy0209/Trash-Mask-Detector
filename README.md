@@ -51,10 +51,6 @@ To install the required python packages simply type
 ```
 pip3 install -r requirements.txt
 ```
-Additionaly, to use ``demo.pynb``, you will also need [coco python api](https://github.com/cocodataset/cocoapi). You can get this using
-```
-pip3 install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
-```
 
 ### Download
 
@@ -83,12 +79,15 @@ python3 download.py --dataset_path ./data/annotations_unofficial.json
 ### Trash Detection
 
 The implementation of [Mask R-CNN by Matterport](https://github.com/matterport/Mask_RCNN)  is included in ``/detector``
-with a few modifications. Requirements are the same. Before using this, the dataset needs to be split. You can either donwload our [weights and splits](https://github.com/pedropro/TACO/releases/tag/1.0) or generate these from scratch using the `split_dataset.py` script to generate 
-N random train, val, test subsets. For example, run this inside the directory `detector`:
+with a few modifications. 
+For example, run this inside the directory `detector` to test detecting trash:
 ```
-python3 split_dataset.py --dataset_dir ../data
+./test.sh
 ```
-
+Training detector on COCO dataset:
+```
+./train.sh
+```
 For further usage instructions, check ``detector/detector.py``.
 
 As you can see [here](http://tacodataset.org/stats), most of the original classes of TACO have very few annotations, therefore these must be either left out or merged together. Depending on the problem, ``detector/taco_config`` contains several class maps to target classes, which maintain the most dominant classes, e.g., Can, Bottles and Plastic bags. Feel free to make your own classes.
