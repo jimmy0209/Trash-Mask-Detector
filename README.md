@@ -1,3 +1,10 @@
+# Trash-Mask-Detector
+
+This repository is a reference for HKPolyU AAE FYP projects. Originial Repository is TACO(see below). 
+We modified some code in detector.py to make it work for our own project.
+
+# TACO
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/wiki/pedropro/TACO/images/logonav.png" width="25%"/>
 </p>
@@ -94,3 +101,6 @@ As you can see [here](http://tacodataset.org/stats), most of the original classe
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/wiki/pedropro/TACO/images/teaser.gif" width="75%"/></p>
+
+### Maintainer:
+[Yurong Feng](https://www.polyu.edu.hk/researchgrp/cywen/index.php/en/people/current-members.html)(Dept.AAE,PolyU): yu-rong.feng@connect.polyu.hk <br />
